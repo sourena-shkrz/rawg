@@ -1,5 +1,6 @@
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import Navbar from "./components/NavBar";
+import GameGrid from "./components/GameGrid";
 
 
 
@@ -17,12 +18,13 @@ function App() {
         
       </GridItem>
       
-      <GridItem area="aside" bg="blue" hideBelow='lg' >
+      <GridItem area="aside"  hideBelow='lg' >
         aside 
       </GridItem>
 
-      <GridItem area="main" bg="gold">
-        <Text>تست فونت</Text>
+      <GridItem area="main" >
+        <Text>لیست بازی ها</Text>
+        <GameGrid />
       </GridItem>
     </Grid>
   );
