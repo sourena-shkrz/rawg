@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Text } from "@chakra-ui/react";
 import Navbar from "./components/NavBar";
 
 
@@ -6,6 +6,7 @@ import Navbar from "./components/NavBar";
 function App() {
   return (
     <Grid
+      dir="rtl"
       templateAreas={{
         base : '"nav" "main"',
         lg: '"nav nav" "aside main"',
@@ -17,11 +18,11 @@ function App() {
       </GridItem>
       
       <GridItem area="aside" bg="blue" hideBelow='lg' >
-        aside
+        aside 
       </GridItem>
 
       <GridItem area="main" bg="gold">
-        main
+        <Text>تست فونت</Text>
       </GridItem>
     </Grid>
   );
