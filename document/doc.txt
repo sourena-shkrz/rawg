@@ -8,3 +8,27 @@ git add .
 git commit -m "initial commit"
 
 npm i axios
+npm install react-icons
+
+
+pc
+playstation
+xbox
+ios
+android
+mac
+Linux
+Nintendo
+Atari
+commodore-amiga
+sega
+3do
+// neo-geo
+web
+
+<HStack>
+        {platforms.map((platform) => (
+          <Text key={platform.slug + "_" + platform.id}>{platform.slug}</Text>
+          
+        ))}
+      </HStack>
