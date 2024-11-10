@@ -19,11 +19,12 @@ function App() {
       </GridItem>
       
       <GridItem area="aside"  hideBelow='lg' >
-        aside 
+         
       </GridItem>
 
       <GridItem area="main" >
-        <Text>لیست بازی ها</Text>
+        <Text fontSize='72px'>Top picks</Text>
+        <Text fontSize='20px'>Based on your ratings</Text>
         <GameGrid />
       </GridItem>
     </Grid>
