@@ -7,7 +7,7 @@ import GameGrid from "./components/GameGrid";
 function App() {
   return (
     <Grid
-      dir="rtl"
+      dir="ltr"
       templateAreas={{
         base : '"nav" "main"',
         lg: '"nav nav" "aside main"',
