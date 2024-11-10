@@ -11,7 +11,7 @@ interface Probs {
 
 const GameCards = ({ game }: Probs) => {
   return (
-    <Card.Root maxW="sm" overflow="hidden">
+    <Card.Root overflow="hidden">
       <Image src={getCroppedImageUrl(game.background_image)} alt={game.name} />
       <Card.Body gap={2} paddingTop={2}>
         <Card.Header padding={0}>
