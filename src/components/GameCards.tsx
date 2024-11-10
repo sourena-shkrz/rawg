@@ -2,6 +2,7 @@ import { Games } from "@/Hooks/useGames";
 import { Card, HStack, Image } from "@chakra-ui/react";
 import { PlatformIconList } from "./PlatformIconList";
 import CriticScoore from "./CriticScoore";
+import getCroppedImageUrl from "@/Services/getCroppedImageUrl";
 
 
 interface Probs {
@@ -11,7 +12,7 @@ interface Probs {
 const GameCards = ({ game }: Probs) => {
   return (
     <Card.Root maxW="sm" overflow="hidden">
-      <Image src={game.background_image} alt={game.name} />
+      <Image src={getCroppedImageUrl(game.background_image)} alt={game.name} />
       <Card.Body gap={2} paddingTop={2}>
         <Card.Header padding={0}>
           <HStack justifyContent='space-between'>
