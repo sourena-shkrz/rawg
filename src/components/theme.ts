@@ -1,12 +1,11 @@
 import { defineTextStyles } from "@chakra-ui/react"
-import "../assets/css/vazir.css"
-import "../assets/css/yekan.css"
+import "../assets/css/iransans-ltr.css"
 
 export const textStyles = defineTextStyles({
   body: {
     description: "The body text style - used in paragraphs",
     value: {
-      fontFamily: "yekan",
+      fontFamily: "iransans",
       fontWeight: "500",
       fontSize: "16px",
       lineHeight: "24",
