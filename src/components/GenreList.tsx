@@ -4,9 +4,10 @@ import { HStack, Image, Link, List, Spinner,Text } from "@chakra-ui/react";
 
 interface Probs {
   onSelectGenre: (genre: Genre | null) => void ;
+  selecedGenre : Genre | null ;
 }
 
-const GenreList = ({ onSelectGenre }: Probs) => {
+const GenreList = ({ onSelectGenre , selecedGenre}: Probs) => {
   const { data, isLoadding, error } = useGenres();
 
   if (error) return null;
@@ -26,6 +27,8 @@ const GenreList = ({ onSelectGenre }: Probs) => {
             />
             <Link
               fontSize="lg"
+              fontWeight={genre.id === selecedGenre?.id ? 'bold' : 'normal'}
+              
               variant="plain"
               onClick={() => onSelectGenre(genre)}
             >
