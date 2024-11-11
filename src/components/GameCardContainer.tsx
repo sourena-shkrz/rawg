@@ -6,7 +6,7 @@ interface Probs {
 }
 const GameCardContainer = ({children}:Probs) => {
   return (
-    <Box width="338px" >
+    <Box  >
         {children}
     </Box>
   )
