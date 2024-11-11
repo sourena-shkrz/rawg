@@ -4,6 +4,7 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./Hooks/useGenres";
+import PlatformSelector from "./components/PlatformSelector";
 
 function App() {
   const [selectedGenre, setSelecedGenre] = useState<Genre | null>(null);
@@ -34,6 +35,7 @@ function App() {
           Based on your ratings{" "}
           {selectedGenre ? "span on Genre : " + selectedGenre.name : null}
         </Text>
+        <PlatformSelector />
         <GameGrid selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
