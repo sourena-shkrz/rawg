@@ -7,10 +7,12 @@ import { Genre } from "./Hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { platform } from "./Hooks/useGames";
 import SortOrder from "./components/SortOrder";
+import { MdQueryBuilder } from "react-icons/md";
 
 export interface GameQuery {
   genre : Genre | null ,
-  platform : platform | null
+  platform : platform | null,
+  sortOrder : string,
 }
 
 
@@ -44,7 +46,7 @@ function App() {
         </Text>
         <HStack gap={2} paddingLeft={2} marginBottom={5}>
           <PlatformSelector  selectedPlatform={gameQuery.platform} onSelecedPlaform={(platform)=>setGameQuery({...gameQuery,platform})} />
-          <SortOrder />
+          <SortOrder sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({...gameQuery,sortOrder})} />
         </HStack>
         
         <GameGrid gameQuery={gameQuery} />
