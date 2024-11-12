@@ -7,12 +7,13 @@ import { Genre } from "./Hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { platform } from "./Hooks/useGames";
 import SortOrder from "./components/SortOrder";
-import { MdQueryBuilder } from "react-icons/md";
+
 
 export interface GameQuery {
   genre : Genre | null ,
   platform : platform | null,
   sortOrder : string,
+  searchText : string,
 }
 
 
@@ -31,7 +32,7 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <Navbar />
+        <Navbar onSerach={(searchText) => setGameQuery({...gameQuery,searchText})} />
       </GridItem>
 
       <GridItem area="aside" hideBelow="lg" paddingX="10px" paddingY="20px">
