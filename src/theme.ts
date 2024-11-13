@@ -1,5 +1,7 @@
-import {  defineTextStyles} from "@chakra-ui/react"
-import "../assets/css/iransans-ltr.css"
+
+import { defineTextStyles } from "@chakra-ui/react/styled-system"
+// import  "../src/assets/css/iransans-ltr.css"
+
 
 export const textStyles = defineTextStyles({
   body: {
@@ -13,6 +15,11 @@ export const textStyles = defineTextStyles({
       textDecoration: "None",
       textTransform: "None",
     },
+  h3:{
+    value:{
+      fontFamily: "tahoma"
+    }
+  }
   },
 })
 
