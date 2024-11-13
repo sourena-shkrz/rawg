@@ -1,4 +1,4 @@
-import { defineTextStyles } from "@chakra-ui/react"
+import {  defineTextStyles} from "@chakra-ui/react"
 import "../assets/css/iransans-ltr.css"
 
 export const textStyles = defineTextStyles({
@@ -15,3 +15,9 @@ export const textStyles = defineTextStyles({
     },
   },
 })
+
+
+
+
+
+
